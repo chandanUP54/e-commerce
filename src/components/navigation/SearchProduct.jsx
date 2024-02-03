@@ -10,7 +10,7 @@ const SearchProduct = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:8071/api/products/search?q=${searchQuery}`)
+      .get(`https://bored-quiver-production.up.railway.app/api/products/search?q=${searchQuery}`)
       .then((res) => {
         setResults(res.data);
       });

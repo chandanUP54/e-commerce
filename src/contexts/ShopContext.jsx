@@ -11,7 +11,7 @@ const ShopContextProvider = (props) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('http://localhost:8071/api/products/all');
+        const response = await axios.get('https://bored-quiver-production.up.railway.app/api/products/all');
         setProducts(response.data);
         setLoading(false);
       } catch (error) {

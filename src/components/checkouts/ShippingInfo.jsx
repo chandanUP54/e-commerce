@@ -32,7 +32,7 @@ const ShippingInfo = () => {
     e.preventDefault();
 
     const order = await axios.post(
-      `http://localhost:8071/api/v1/orders/`,
+      `https://bored-quiver-production.up.railway.app/api/v1/orders/`,
       shippingAddress,
       config
     );

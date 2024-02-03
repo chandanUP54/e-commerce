@@ -34,7 +34,7 @@ const ProductDisplay = () => {
   const handleCartItem = async () => {
     try {
       const response = await axios.post(
-        "http://localhost:8071/api/v1/cartItems/addItem",
+        "https://bored-quiver-production.up.railway.app/api/v1/cartItems/addItem",
         {
           productName: product.name,
           productId: product.id,

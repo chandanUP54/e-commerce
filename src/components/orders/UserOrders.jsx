@@ -24,7 +24,7 @@ const UserOrders = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:8071/api/v1/orders/user`, config)
+      .get(`https://bored-quiver-production.up.railway.app/api/v1/orders/user`, config)
       .then((response) => {
         setOrders(response.data);
         

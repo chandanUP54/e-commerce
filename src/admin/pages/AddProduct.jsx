@@ -53,7 +53,7 @@ const AddProduct = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const product_post = await axios.post(
-      `http://localhost:8071/api/v1/admin/products/`,
+      `https://bored-quiver-production.up.railway.app/api/v1/admin/products/`,
       product,
       config
     );

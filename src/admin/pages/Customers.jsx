@@ -19,7 +19,7 @@ const Customers = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:8071/api/v1/admin/orders/allUsers`, config)
+      .get(`https://bored-quiver-production.up.railway.app/api/v1/admin/orders/allUsers`, config)
       .then((response) => {
         console.log(response);
         console.log("customers", response.data);

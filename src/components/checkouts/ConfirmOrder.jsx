@@ -39,9 +39,9 @@ const ConfirmOrder = () => {
       status: status,
     };
 
-    // await axios.post("http://localhost:8071/api/v1/payment", payment, config);
+    // await axios.post("https://bored-quiver-production.up.railway.app/api/v1/payment", payment, config);
     await axios.post(
-      `http://localhost:8071/api/v1/payment/${userOrderId}`,
+      `https://bored-quiver-production.up.railway.app/api/v1/payment/${userOrderId}`,
       payment,
       config
     );
@@ -89,7 +89,7 @@ const ConfirmOrder = () => {
     }
 
     const order = await axios.post(
-      `http://localhost:8071/api/v1/create_order/${userOrderId}`,
+      `https://bored-quiver-production.up.railway.app/api/v1/create_order/${userOrderId}`,
       {},
       config
     );
@@ -116,7 +116,7 @@ const ConfirmOrder = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:8071/api/v1/cartItems/`, config)
+      .get(`https://bored-quiver-production.up.railway.app/api/v1/cartItems/`, config)
       .then((res) => {
         // console.log(res);
         setProductsInCart(res.data);

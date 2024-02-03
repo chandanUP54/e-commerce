@@ -18,7 +18,7 @@ const CartItems = ({ cartItem, onRemoveItem }) => {
   const handleIncreaseQty = async () => {
     try {
       const response = await axios.put(
-        `http://localhost:8071/api/v1/cartItems/${cartItem.cartItemId}`,
+        `https://bored-quiver-production.up.railway.app/api/v1/cartItems/${cartItem.cartItemId}`,
         {
           quantity: cartItem.quantity + 1,
           old_price: cartItem.old_price / cartItem.quantity,
@@ -36,7 +36,7 @@ const CartItems = ({ cartItem, onRemoveItem }) => {
   const handleDecreaseQty = async () => {
     if (cartItem.quantity > 1) {
       const response = await axios.put(
-        `http://localhost:8071/api/v1/cartItems/${cartItem.cartItemId}`,
+        `https://bored-quiver-production.up.railway.app/api/v1/cartItems/${cartItem.cartItemId}`,
         {
           quantity: cartItem.quantity - 1, // Decrease quantity by 1, ensuring it doesn't go below 1
           old_price: cartItem.old_price / cartItem.quantity,

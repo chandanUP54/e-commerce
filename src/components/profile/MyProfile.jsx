@@ -17,7 +17,7 @@ const Profile = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:8071/api/v1/profile`, config)
+      .get(`https://bored-quiver-production.up.railway.app/api/v1/profile`, config)
       .then((response) => {
         setUser(response.data);
       })

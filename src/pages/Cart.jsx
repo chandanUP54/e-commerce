@@ -18,7 +18,7 @@ const Cart = () => {
     const fetchCartItems = async () => {
       try {
         
-        const response = await axios.get(`http://localhost:8071/api/v1/carts/info`,config);
+        const response = await axios.get(`https://bored-quiver-production.up.railway.app/api/v1/carts/info`,config);
         setCartItems(response.data.cartItems);// this is cartItems
         // localStorage.setItem("userId", response.data.user.userId);
       } catch (error) {
@@ -58,7 +58,7 @@ const Cart = () => {
 
   const handleRemoveItem = async (cartItemId) => {
     try {
-      await axios.delete(`http://localhost:8071/api/v1/cartItems/${cartItemId}`,config);
+      await axios.delete(`https://bored-quiver-production.up.railway.app/api/v1/cartItems/${cartItemId}`,config);
       const updatedCartItems = cartItems.filter(
         (item) => item.id !== cartItemId
       );
@@ -145,7 +145,7 @@ export default Cart;
 //     const fetchCartItems = async () => {
 //       try {
 //         const response = await axios.get(
-//           `http://localhost:8071/api/v1/carts/info`,
+//           `https://bored-quiver-production.up.railway.app/api/v1/carts/info`,
 //           config
 //         );
 //         setCartItems(response.data.cartItems);
@@ -183,7 +183,7 @@ export default Cart;
 //   const handleRemoveItem = async (cartItemId) => {
 //     try {
 //       await axios.delete(
-//         `http://localhost:8071/api/v1/cartItems/${cartItemId}`,
+//         `https://bored-quiver-production.up.railway.app/api/v1/cartItems/${cartItemId}`,
 //         config
 //       );
 //       const updatedCartItems = cartItems.filter(

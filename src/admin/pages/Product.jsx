@@ -25,7 +25,7 @@ const Product = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:8071/api/v1/admin/products/all`, config)
+      .get(`https://bored-quiver-production.up.railway.app/api/v1/admin/products/all`, config)
       .then((response) => {
         setProducts(response.data);
       })
@@ -40,7 +40,7 @@ const Product = () => {
   const handleStatusChange = async (id) => {
     try {
       await axios.delete(
-        `http://localhost:8071/api/v1/admin/products/${id}/delete`,
+        `https://bored-quiver-production.up.railway.app/api/v1/admin/products/${id}/delete`,
         config
       );
       // window.location.reload();

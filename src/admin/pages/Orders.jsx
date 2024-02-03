@@ -22,7 +22,7 @@ const Orders = () => {
   const handleStatusChange = async (orderId, newStatus) => {
     try {
       await axios.put(
-        `http://localhost:8071/api/v1/admin/orders/${orderId}`,
+        `https://bored-quiver-production.up.railway.app/api/v1/admin/orders/${orderId}`,
         { orderStatus: newStatus },
         config
       );
@@ -36,7 +36,7 @@ const Orders = () => {
   };
   useEffect(() => {
     axios
-      .get(`http://localhost:8071/api/v1/admin/orders/`, config)
+      .get(`https://bored-quiver-production.up.railway.app/api/v1/admin/orders/`, config)
       .then((response) => {
         console.log(response);
         console.log(response.data);

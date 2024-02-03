@@ -1,6 +1,6 @@
 import axios from "axios";
 // connected to e-com-spring
-const BASE_API_URL="http://localhost:8071/auth"
+const BASE_API_URL="https://bored-quiver-production.up.railway.app/auth"
 class UserService{
 
     saveUser(user){
