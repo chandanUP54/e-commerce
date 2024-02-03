@@ -1,0 +1,231 @@
+.product-display {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  padding: 20px;
+  margin: 10px;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+/* css for left */
+
+.product-display-left {
+  margin: auto;
+}
+
+.product-display-imglist {
+  display: flex;
+  flex-direction: row;
+  gap: 7px;
+  margin-left: 20px;
+  margin-top: 15px;
+  padding:0 10px;
+}
+.product-display-imglist img {
+  height: 143px;
+  width: 120px;
+  object-fit: cover;
+  cursor: pointer;
+  border: 1px solid grey;
+}
+.product-display-imglist img:hover {
+  border: 2px solid #007bff;
+}
+
+.product-display-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+.product-display-main-img {
+  width: 400px;
+  height: 480px;
+  border: 1px solid rgb(110, 107, 107);
+}
+
+/* css for right */
+
+.product-display-right {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  padding: 16px;
+  
+}
+.product-display-right h1 {
+  color: #3d3d3d;
+  font-size: 30px;
+  font-weight: 700;
+}
+.product-display-right-star {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.product-display-right-star p {
+  margin-top: 19px;
+}
+.product-display-right-price {
+  display: flex;
+  /* margin: 20px 0; */
+  margin-bottom: 10px;
+  gap: 18px;
+  font-size: 19px;
+  font-weight: 500;
+}
+.product-display-right-price-old {
+  text-decoration: line-through;
+  color: #818181;
+}
+.product-display-right-price-new {
+  color: #ff4141;
+}
+.product-display-right-size h1 {
+  margin-top: 20px;
+  font-size: 20px;
+  color: black;
+}
+.size-list {
+  display: flex;
+  gap: 12px;
+  margin: 20px 0;
+  font-size: 12px;
+}
+.size-list div {
+  background: #fbfbfb;
+  border: 2px dotted #c2c2c2 !important;
+  border-radius: 3px;
+  font-size: 10px;
+  padding: 10px 14px;
+  cursor: pointer;
+}
+.size-list div.selected {
+  border: 2px solid #2874f0 !important;
+}
+
+.product-display-right button {
+  width: 150px;
+  font-size: 16px;
+  font-weight: 500;
+  color: white;
+  background: #ff4141;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  margin-bottom: 18px;
+}
+.product-display-right-category {
+  margin-top: 8px;
+}
+.product-display-right-category span {
+  font-weight: 600;
+  margin-right: 12px;
+}
+
+@media screen and (max-width: 996px) {
+  .product-display {
+    grid-template-columns: 1fr;
+  }
+  .product-display-right h1 {
+    font-size: 24px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .product-display {
+    grid-template-columns: 1fr;
+  }
+
+  .product-display-right {
+    padding: 12px;
+  }
+  .product-display-right h1 {
+    font-size: 24px;
+  }
+  .size-list {
+    gap: 10px;
+    margin: 20px 0;
+    font-size: 10px;
+  }
+  .size-list div {
+    border-radius: 3px;
+    padding: 12px 28px;
+    cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 468px) {
+  .product-display {
+    grid-template-columns: 1fr;
+  }
+
+  .product-display-imglist {
+    margin-top: 20px;
+  }
+  .product-display-imglist img {
+    height: 103px;
+    width: 80px;
+  }
+
+  .product-display-main-img {
+    width: 200px;
+    padding: 0;
+    margin: 0;
+    height: 300px;
+  }
+ 
+  .product-display-right{
+     /* margin: 12px 30px; */
+     width: 100%;
+  }
+
+  .product-display-right h1 {
+    font-size: 16px;
+    font-weight: 700;
+  }
+  .product-display-right-price {
+    margin-bottom: 10px;
+    gap: 10px;
+    font-size: 12px;
+    font-weight: 500;
+  }
+
+  .product-display-right-size h1 {
+    margin-top: 20px;
+    font-size: 10px;
+  }
+  .product-display-right-description {
+    font-size: 12px;
+  }
+
+  .size-list {
+    gap: 10px;
+    margin: 20px 0;
+    font-size: 10px;
+  }
+  .size-list div {
+    border-radius: 3px;
+    padding: 12px 18px;
+    cursor: pointer;
+  }
+
+  .product-display-right button {
+    width: 100px;
+    font-size: 10px;
+    font-weight: 500;
+    padding: 10px 20px;
+    border-radius: 8px;
+    margin-bottom: 9px;
+  }
+  .product-display-right-category {
+    margin-top: 4px;
+    font-size: 12px;
+  }
+  .product-display-right-category span {
+    font-weight: 600;
+    margin-right: 6px;
+  }
+}

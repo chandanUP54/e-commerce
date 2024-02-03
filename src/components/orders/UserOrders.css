@@ -1,0 +1,79 @@
+.order-container h1 {
+  font-weight: 600;
+
+  margin-top: 25px;
+}
+
+.order-pack {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #bdcfcf;
+  border-radius: 8px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+.order-pack .order-details h6 {
+  font-weight: 700;
+}
+.order-details {
+  display: flex;
+  justify-content: space-between;
+  background: #f0f2f2;
+}
+.order-details > div {
+  flex: 1;
+  margin: 8px;
+  padding: 16px;
+  box-sizing: border-box;
+}
+.order-info {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
+  margin-top: 10px;
+}
+
+.order-info img {
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+.order-info a {
+  text-decoration: none;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+@media screen and (max-width: 720px) {
+  .order-info {
+    padding: 15px;
+  }
+  .order-info a {
+    font-size: 12px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .order-info p {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 468px) {
+  .order-pack,
+  h6 {
+    font-size: 10px;
+  }
+  .order-details > div {
+    margin: 2px;
+    padding: 4px;
+  }
+  .order-info {
+    padding: 10px;
+  }
+  .order-info a {
+    font-size: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}

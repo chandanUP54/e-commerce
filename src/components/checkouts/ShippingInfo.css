@@ -1,0 +1,28 @@
+.shipping-info{
+    padding: 20px;
+   
+}
+.shipping-form{
+    padding: 20px;
+    border-radius: 10px;
+    
+}
+.form-group{
+  margin-bottom: 15px;
+}
+
+@media screen and (max-width: 1000px) {
+    .shipping-form{
+    width: 50%;
+    }
+}
+@media screen and (max-width: 768px) {
+    .shipping-form{
+        width: 70%;
+    }
+}
+@media screen and (max-width: 460px) {
+    .shipping-form{
+       width: 80%; 
+    }
+}

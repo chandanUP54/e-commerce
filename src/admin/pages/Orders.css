@@ -1,0 +1,44 @@
+.orders-container img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  object-fit: cover;
+  margin-right: -10px;
+}
+.orders-container p {
+  font-size: 12px;
+  margin-bottom: 9px;
+}
+.product-images {
+  max-width: 200px;
+  height: auto;
+}
+.order-status {
+  width: 100px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  border: none;
+  background: green;
+  color: white;
+  font-size: 13px;
+}
+
+.order-update button{
+
+  margin-top: 2px;
+  width: 60%;
+  border: none;
+  color: blueviolet;
+  font-size: 20px;
+  background: none;
+
+  &:hover{
+    background-color: #d9cede;
+    border-radius: 8px;
+  }
+}
+

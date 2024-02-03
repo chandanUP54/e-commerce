@@ -1,0 +1,27 @@
+
+.new-collections {
+  margin-bottom: 30px;
+  margin-top: 20px;
+  padding: auto;
+  text-align: center;
+}
+.new-collections h1{
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.collections{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 28px;
+}
+
+
+@media screen and (max-width: 468px) {
+ 
+  .collections {
+    padding: 15px;
+    margin-top: 15px;
+  }
+}

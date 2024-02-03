@@ -1,0 +1,9 @@
+.order-info button{
+    width: 100px;
+    height: 35px;
+    border-radius: 12px;
+    background: green;
+    color: white;
+     margin-right: 10px;
+    border: none;
+}
