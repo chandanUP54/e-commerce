@@ -17,7 +17,7 @@ const Hero = () => {
             </p>
             <div class="text-center w-100 text-md-start">
               <a
-                href="http://localhost:3000/womens"
+                href="https://ecommerce-by-chandan.vercel.app/womens"
                 class="btn btn-primary px-5 py-2"
               >
                 Latest Collection
@@ -29,7 +29,7 @@ const Hero = () => {
           </div>
           <div class="order-lg-1 order-0  col-12 col-md-12 col-lg-6">
             <div class="text-center text-lg-end">
-              <a href="http://localhost:3000/womens">
+              <a href="https://ecommerce-by-chandan.vercel.app/womens">
                 <img src={hero_img} alt="" class="hero-photo img-fluid py-3" />
               </a>
             </div>

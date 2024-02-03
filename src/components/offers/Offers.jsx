@@ -8,13 +8,13 @@ const Offers = () => {
         <h1>Exclusive</h1>
         <h1>Offer For You</h1>
         <p>Only On Best Price</p>
-        <a href="http://localhost:3000/womens">
+        <a href="https://ecommerce-by-chandan.vercel.app/womens">
           {" "}
           <button>Check Now</button>
         </a>
       </div>
       <div className="offers-right">
-        <a href="http://localhost:3000/womens">
+        <a href="https://ecommerce-by-chandan.vercel.app/womens">
           <img src={exclusive_image} alt="" />
         </a>
       </div>
