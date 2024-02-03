@@ -1,0 +1,46 @@
+
+.hero-section .container{
+  display: grid;
+  place-content: center;
+  height: inherit;
+}
+.hero-section .container button {
+  width: 350px;
+  height: 90%;
+  font-size: 26px;
+  border-radius: 44px;
+}
+.hero-photo {
+  max-width: 100%;
+  height: auto;
+  width: 70%;
+  border-radius: 2rem;
+}
+.bg-main{
+  /* height: 80vh; */
+  position: relative;
+  padding: 60px 30px;
+}
+@media screen and (max-width:468px) {
+  .hero-section .container button {
+    width: 150px;
+    height: 50px;
+    font-size: 12px;
+    border-radius: 24px;
+  }
+}
+
+.nav-link{
+  color: var(--bs-main-color);
+}
+.text-light-grey{
+  color: var(--bs-main-color);
+}
+
+
+button,a{
+  font-size: 1.15rem;
+  letter-spacing: 0.03rem;
+  word-spacing: 0.01rem;
+}
+

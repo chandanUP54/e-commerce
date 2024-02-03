@@ -1,0 +1,61 @@
+/* page-not-found.css */
+.page-not-found {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f5f5f5;
+    font-family: sans-serif;
+    color: #333;
+  }
+  
+  .page-not-found h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: #222;
+  }
+  
+  .page-not-found p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin-bottom: 2rem;
+  }
+  
+  .page-not-found .actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  .page-not-found .actions a {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #333;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .page-not-found .actions a:hover {
+    background-color: #eee;
+    color: #222;
+  }
+  
+  .page-not-found .actions a:active {
+    transform: translateY(2px);
+  }
+  
+  /* Optional customization based on Stack Overflow's style */
+  .page-not-found img {
+    max-width: 300px;
+    border-radius: 5px;
+    margin-bottom: 2rem;
+  }
+  
+  .page-not-found .stack-overflow-logo {
+    height: 60px;
+  }
+  

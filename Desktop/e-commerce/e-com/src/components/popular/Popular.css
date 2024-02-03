@@ -1,0 +1,27 @@
+
+.popular {
+  margin-bottom: 30px;
+  margin-top: 20px;
+  padding: auto;
+  text-align: center;
+}
+.popular h1{
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.popular-item{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 28px;
+}
+
+
+@media screen and (max-width: 468px) {
+ 
+  .popular-item {
+    padding: 15px;
+    margin-top: 15px;
+  }
+}
