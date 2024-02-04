@@ -3,6 +3,7 @@ import swal from "sweetalert";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { ShopContext } from "../../contexts/ShopContext";
+import { BASE_API_URL } from "../backend/user.service";
 const ConfirmOrder = () => {
   const navigate = useNavigate();
   const [productsInCart, setProductsInCart] = useState([]);
@@ -39,9 +40,8 @@ const ConfirmOrder = () => {
       status: status,
     };
 
-    // await axios.post("https://bored-quiver-production.up.railway.app/api/v1/payment", payment, config);
     await axios.post(
-      `https://bored-quiver-production.up.railway.app/api/v1/payment/${userOrderId}`,
+      `${BASE_API_URL}/api/v1/payment/${userOrderId}`,
       payment,
       config
     );
@@ -89,7 +89,7 @@ const ConfirmOrder = () => {
     }
 
     const order = await axios.post(
-      `https://bored-quiver-production.up.railway.app/api/v1/create_order/${userOrderId}`,
+      `${BASE_API_URL}/api/v1/create_order/${userOrderId}`,
       {},
       config
     );
@@ -116,7 +116,7 @@ const ConfirmOrder = () => {
 
   useEffect(() => {
     axios
-      .get(`https://bored-quiver-production.up.railway.app/api/v1/cartItems/`, config)
+      .get(`${BASE_API_URL}/api/v1/cartItems/`, config)
       .then((res) => {
         // console.log(res);
         setProductsInCart(res.data);

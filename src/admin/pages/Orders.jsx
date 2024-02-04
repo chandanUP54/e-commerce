@@ -3,6 +3,7 @@ import Pagination from "react-bootstrap/Pagination";
 import "./Orders.css";
 import axios from "axios";
 import swal from "sweetalert";
+import { BASE_API_URL } from "../../components/backend/user.service";
 import { useLocation, useNavigate, useParams } from "react-router-dom";
 const Orders = () => {
   const [orders, setOrders] = useState([]);
@@ -22,7 +23,7 @@ const Orders = () => {
   const handleStatusChange = async (orderId, newStatus) => {
     try {
       await axios.put(
-        `https://bored-quiver-production.up.railway.app/api/v1/admin/orders/${orderId}`,
+        `${BASE_API_URL}/api/v1/admin/orders/${orderId}`,
         { orderStatus: newStatus },
         config
       );
@@ -36,7 +37,7 @@ const Orders = () => {
   };
   useEffect(() => {
     axios
-      .get(`https://bored-quiver-production.up.railway.app/api/v1/admin/orders/`, config)
+      .get(`${BASE_API_URL}/api/v1/admin/orders/`, config)
       .then((response) => {
         console.log(response);
         console.log(response.data);

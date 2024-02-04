@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-
+import { BASE_API_URL } from "../backend/user.service";
 import axios from "axios";
 import "./MyProfile.css";
 const Profile = () => {
@@ -17,7 +17,7 @@ const Profile = () => {
 
   useEffect(() => {
     axios
-      .get(`https://bored-quiver-production.up.railway.app/api/v1/profile`, config)
+      .get(`${BASE_API_URL}/api/v1/profile`, config)
       .then((response) => {
         setUser(response.data);
       })

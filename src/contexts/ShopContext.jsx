@@ -1,6 +1,7 @@
 
 import React, { createContext, useState, useEffect } from "react";
 import axios from "axios";
+import { BASE_API_URL } from "../components/backend/user.service";
 // import all_product from "../components/assets/all_product";
 
 export const ShopContext = createContext(null);
@@ -12,7 +13,7 @@ const ShopContextProvider = (props) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('https://bored-quiver-production.up.railway.app/api/products/all');
+        const response = await axios.get(`${BASE_API_URL}/api/products/all`);
         setProducts(response.data);
         setLoading(false);
       } catch (error) {

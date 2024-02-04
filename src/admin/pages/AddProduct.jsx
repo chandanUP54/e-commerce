@@ -6,6 +6,7 @@ import "./AddProduct.css";
 import { useState } from "react";
 import axios from "axios";
 import swal from "sweetalert";
+import { BASE_API_URL } from "../../components/backend/user.service";
 
 const AddProduct = () => {
   const jwtToken = localStorage.getItem("jwt");
@@ -53,7 +54,7 @@ const AddProduct = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const product_post = await axios.post(
-      `https://bored-quiver-production.up.railway.app/api/v1/admin/products/`,
+      `${BASE_API_URL}/api/v1/admin/products/`,
       product,
       config
     );

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Item from "../item/Item";
 import axios from "axios";
 import { useLocation } from "react-router-dom";
-
+import { BASE_API_URL } from "../backend/user.service";
 const SearchProduct = () => {
   const [results, setResults] = useState([]);
   const location = useLocation();
@@ -10,7 +10,7 @@ const SearchProduct = () => {
 
   useEffect(() => {
     axios
-      .get(`https://bored-quiver-production.up.railway.app/api/products/search?q=${searchQuery}`)
+      .get(`${BASE_API_URL}/api/products/search?q=${searchQuery}`)
       .then((res) => {
         setResults(res.data);
       });

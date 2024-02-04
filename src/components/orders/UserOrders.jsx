@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import "./UserOrders.css";
+import { BASE_API_URL } from "../backend/user.service";
 const UserOrders = () => {
   const [orders, setOrders] = useState([]);
   const jwtToken = localStorage.getItem("jwt");
@@ -24,7 +25,7 @@ const UserOrders = () => {
 
   useEffect(() => {
     axios
-      .get(`https://bored-quiver-production.up.railway.app/api/v1/orders/user`, config)
+      .get(`${BASE_API_URL}/api/v1/orders/user`, config)
       .then((response) => {
         setOrders(response.data);
         

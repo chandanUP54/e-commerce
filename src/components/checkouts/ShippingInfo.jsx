@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 // import { countries } from "countries-list";
 import axios from "axios";
 import "./ShippingInfo.css";
+import { BASE_API_URL } from "../backend/user.service";
 import { ShopContext } from "../../contexts/ShopContext";
 const ShippingInfo = () => {
   const navigate = useNavigate();
@@ -32,7 +33,7 @@ const ShippingInfo = () => {
     e.preventDefault();
 
     const order = await axios.post(
-      `https://bored-quiver-production.up.railway.app/api/v1/orders/`,
+      `${BASE_API_URL}/api/v1/orders/`,
       shippingAddress,
       config
     );
