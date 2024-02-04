@@ -4,12 +4,12 @@ import { Navigate, Route, Routes } from "react-router-dom";
 import Shop from "./pages/Shop";
 import Product from "./pages/Product";
 import Cart from "./pages/Cart";
-import Signin from "./pages/Signin";
+import Signin from "./components/auth/Signin";
+import Signup from './components/auth/Signup'
 import Footer from "../src/components/footer/Footer";
 import mens_banner from "../src/components/assets/banner_mens.png";
 import womens_banner from "../src/components/assets/banner_women.png";
 import kids_banner from "../src/components/assets/banner_kids.png";
-import Signup from "./pages/Signup";
 import ShippingInfo from "./components/checkouts/ShippingInfo";
 import ConfirmOrder from "./components/checkouts/ConfirmOrder";
 import MyProfile from "./components/profile/MyProfile";

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import "./css/Signup.css";
+import "./Signup.css";
 import { useNavigate } from "react-router-dom";
-import userService from "../components/backend/user.service";
+import userService from "../backend/user.service";
 
 const Signup = () => {
   const navigate = useNavigate();
