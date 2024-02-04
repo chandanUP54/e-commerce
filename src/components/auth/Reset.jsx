@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import axios from "axios";
 import "./Reset.css";
+import { BASE_API_URL } from "../backend/user.service";
 const Reset = () => {
   const navigate = useNavigate();
   const location = useLocation();
@@ -25,7 +26,7 @@ const Reset = () => {
     // Send a request to your backend to update the password
     try {
       const response = await axios.post(
-        "http://localhost:8087/auth/reset-password",
+        `${BASE_API_URL}/auth/reset-password`,
         {
           email,
           token,
@@ -37,7 +38,7 @@ const Reset = () => {
       console.log(token);
       console.log(response);
       if (response.status === 200) {
-        navigate("/login");
+        navigate("/");
       } else {
         setError(response.data.message || "Password reset failed");
       }

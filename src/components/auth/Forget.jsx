@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import "./Forget.css";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { BASE_API_URL } from "../backend/user.service";
+import swal from "sweetalert";
 const Forget = () => {
   const navigate=useNavigate();
   const [email, setEmail] = useState("");
@@ -13,17 +15,16 @@ const Forget = () => {
     // navigate("/forget-password-message");
     try {
       const response = await axios.post(
-        "http://localhost:8087/auth/forget-password",
+        `${BASE_API_URL}/auth/forget-password`,
         null,
         {
           params: { email },
         }
       );
       if (response.status === 200) {
-        setMessage(
-          "Please check your email to set a new password for your account."
-        );
-        navigate("/forget-password-message") ;
+       
+       
+        swal("your reset password link has been sent to your email,check your inbox")
       } else {
         setMessage(
           response.data.message ||

@@ -5,7 +5,9 @@ import Shop from "./pages/Shop";
 import Product from "./pages/Product";
 import Cart from "./pages/Cart";
 import Signin from "./components/auth/Signin";
-import Signup from './components/auth/Signup'
+import Signup from "./components/auth/Signup";
+import Forget from './components/auth/Forget'
+import Reset from './components/auth/Reset'
 import Footer from "../src/components/footer/Footer";
 import mens_banner from "../src/components/assets/banner_mens.png";
 import womens_banner from "../src/components/assets/banner_women.png";
@@ -54,6 +56,9 @@ function App() {
         <Route path="/cart" element={<Protected Component={Cart} />} />
         <Route path="/login" element={<Signin />} />
         <Route path="/signup" element={<Signup />}></Route>
+        <Route path="/forget-password" element={<Forget />}></Route>
+        <Route path="/reset-password" element={<Reset />} />
+        
         <Route
           path="/shipping"
           element={<Protected Component={ShippingInfo} />}
