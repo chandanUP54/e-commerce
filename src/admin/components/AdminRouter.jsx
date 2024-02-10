@@ -12,7 +12,7 @@ const AdminRouter = () => {
       <AdminSidebar>
         <Routes>
           <Route path="/" element={<Dashboard />} />
-          {/* <Route path="/product" element={<Product />} /> */}
+         
           <Route path="/product" element={<Product />} />
           <Route path="/product/:page" element={<Product />} />
 
