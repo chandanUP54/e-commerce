@@ -43,7 +43,8 @@ const ShippingInfo = () => {
     localStorage.setItem("orderId", order.data.orderId);
     navigate("/order/confirm");
    
-    setShippingInformation(shippingAddress)
+    setShippingInformation(shippingAddress);
+  
   };
 
 

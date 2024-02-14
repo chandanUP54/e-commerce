@@ -22,6 +22,7 @@ import AdminRouter from "./admin/components/AdminRouter";
 import OrdersTest from "./admin/components/OrdersTest";
 import ProductDisplay from "./components/productDisplay/ProductDisplay";
 import SearchProduct from "./components/navigation/SearchProduct";
+import CheckoutSteps from "./components/checkouts/CheckoutSteps";
 
 const roles = localStorage.getItem("roles");
 
@@ -87,6 +88,8 @@ function App() {
 
         {/* remove this */}
         <Route path="/product/search" element={<SearchProduct />}></Route>
+        {/* <Route path="/checkout" element={<CheckoutSteps />}></Route> */}
+
       </Routes>
       <Footer />
     </div>
