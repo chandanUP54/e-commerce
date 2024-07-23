@@ -1,24 +1,23 @@
-.container-login {
+.container-login1 {
   position: fixed;
   top: 70px;
+  bottom: 0;
   left: 0;
   right: 0;
   overflow: hidden;
   background: rgb(1, 17, 18);
-  height: 100%;
   box-shadow: 0 0px 10px rgba(0, 0, 0, 0.5), 0 35px 22px rgba(0, 0, 0, 0.16);
   display: flex;
   align-items: center;
   justify-content: center;
 }
-
-.form2 {
+.form1 {
   display: flex;
   align-items: center;
   flex-direction: column;
   gap: 18px;
   width: 400px;
-  height: 470px;
+  height: 680px;
   border-radius: 10px;
   margin-top: 30px;
   padding-top: 80px;
@@ -28,12 +27,12 @@
   box-shadow: 0 0px 10px rgba(0, 0, 0, 0.5), 0 35px 22px rgba(0, 0, 0, 0.16);
 }
 
-.form2 label {
+.form1 label {
   font-size: 26px;
   font-weight: 600;
 }
 
-.form2 input {
+.form1 input {
   width: 350px;
   height: 30px;
   font-size: 14px;
@@ -42,7 +41,7 @@
   box-shadow: none;
 }
 
-.form2 button {
+.form1 button {
   width: 130px;
   height: 40px;
   font-size: 20px;
@@ -62,28 +61,26 @@
 /* media query */
 
 @media screen and (max-width: 468px) {
-  .container-login {
+  .container-login1{
     top: 40px;
   }
-
-  .form2 {
+  .form1 {
     width: 300px;
-    height: 400px;
+    height: 560px;
     border-radius: 10px;
     margin-top: -60px;
     padding-top: -80px;
     margin-left: 15px;
     margin-right: 15px;
-    /* border: 2px solid blue; */
   }
 
-  .form2 label {
+  .form1 label {
     font-size: 20px;
   }
 
-  .form2 input {
+  .form1 input {
     width: 270px;
-    height: 24px;
+    height: 28px;
     font-size: 16px;
     border-radius: 5px;
     border: 1px solid;

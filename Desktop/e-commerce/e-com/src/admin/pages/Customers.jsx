@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Pagination from "react-bootstrap/Pagination";
-
+import { BASE_API_URL } from "../../components/backend/user.service";
 import axios from "axios";
 import swal from "sweetalert";
 import { useLocation, useNavigate, useParams } from "react-router-dom";
@@ -19,7 +19,7 @@ const Customers = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:8071/api/v1/admin/orders/allUsers`, config)
+      .get(`${BASE_API_URL}/api/v1/admin/orders/allUsers`, config)
       .then((response) => {
         console.log(response);
         console.log("customers", response.data);

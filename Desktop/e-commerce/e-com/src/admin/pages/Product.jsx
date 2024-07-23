@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import Pagination from "react-bootstrap/Pagination";
 import "./Product.css";
+import { BASE_API_URL } from "../../components/backend/user.service";
 import swal from "sweetalert";
 import { useLocation, useNavigate, useParams } from "react-router-dom";
 const Product = () => {
@@ -25,7 +26,7 @@ const Product = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:8071/api/v1/admin/products/all`, config)
+      .get(`${BASE_API_URL}/api/v1/admin/products/all`, config)
       .then((response) => {
         setProducts(response.data);
       })
@@ -40,7 +41,7 @@ const Product = () => {
   const handleStatusChange = async (id) => {
     try {
       await axios.delete(
-        `http://localhost:8071/api/v1/admin/products/${id}/delete`,
+        `${BASE_API_URL}/api/v1/admin/products/${id}/delete`,
         config
       );
       // window.location.reload();

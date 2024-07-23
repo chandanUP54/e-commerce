@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import "./css/LoginSignup.css";
+import "./Signin.css";
 import { NavLink, useNavigate ,useLocation } from "react-router-dom";
-import userService from "../components/backend/user.service";
+import userService from '../backend/user.service'
 const Signin = () => {
   const navigate = useNavigate();
   const location = useLocation();

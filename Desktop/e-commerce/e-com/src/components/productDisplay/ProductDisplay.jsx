@@ -8,7 +8,7 @@ import RelatedProduct from "../relatedProducts/RelatedProduct";
 import BreadCrums from "../breadcrums/BreadCrums";
 import DescriptionBox from "../description/DescriptionBox";
 import { useNavigate, useParams } from "react-router-dom";
-
+import { BASE_API_URL } from "../backend/user.service";
 const ProductDisplay = () => {
   const { all_product } = useContext(ShopContext);
   const { productId } = useParams();
@@ -34,7 +34,7 @@ const ProductDisplay = () => {
   const handleCartItem = async () => {
     try {
       const response = await axios.post(
-        "http://localhost:8071/api/v1/cartItems/addItem",
+        `${BASE_API_URL}/api/v1/cartItems/addItem`,
         {
           productName: product.name,
           productId: product.id,

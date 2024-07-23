@@ -5,6 +5,7 @@ import axios from "axios";
 import CartItems from '../components/cartItems/CartItems'
 import "./css/Cart.css";
 import { useNavigate } from "react-router-dom";
+import { BASE_API_URL } from "../components/backend/user.service";
 const Cart = () => {
   const [cartItems, setCartItems] = useState([]);
   const navigate=useNavigate()
@@ -18,7 +19,7 @@ const Cart = () => {
     const fetchCartItems = async () => {
       try {
         
-        const response = await axios.get(`http://localhost:8071/api/v1/carts/info`,config);
+        const response = await axios.get(`${BASE_API_URL}/api/v1/carts/info`,config);
         setCartItems(response.data.cartItems);// this is cartItems
         // localStorage.setItem("userId", response.data.user.userId);
       } catch (error) {
@@ -58,7 +59,7 @@ const Cart = () => {
 
   const handleRemoveItem = async (cartItemId) => {
     try {
-      await axios.delete(`http://localhost:8071/api/v1/cartItems/${cartItemId}`,config);
+      await axios.delete(`${BASE_API_URL}/api/v1/cartItems/${cartItemId}`,config);
       const updatedCartItems = cartItems.filter(
         (item) => item.id !== cartItemId
       );
@@ -145,7 +146,7 @@ export default Cart;
 //     const fetchCartItems = async () => {
 //       try {
 //         const response = await axios.get(
-//           `http://localhost:8071/api/v1/carts/info`,
+//           `${BASE_API_URL}/api/v1/carts/info`,
 //           config
 //         );
 //         setCartItems(response.data.cartItems);
@@ -183,7 +184,7 @@ export default Cart;
 //   const handleRemoveItem = async (cartItemId) => {
 //     try {
 //       await axios.delete(
-//         `http://localhost:8071/api/v1/cartItems/${cartItemId}`,
+//         `${BASE_API_URL}/api/v1/cartItems/${cartItemId}`,
 //         config
 //       );
 //       const updatedCartItems = cartItems.filter(

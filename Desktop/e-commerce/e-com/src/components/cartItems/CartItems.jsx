@@ -2,10 +2,10 @@
 import React from "react";
 import "./CartItem.css";
 import { NavLink } from "react-router-dom";
-
 import { CiCirclePlus } from "react-icons/ci";
 import { CiCircleMinus } from "react-icons/ci";
 import axios from "axios";
+import {BASE_API_URL} from '../backend/user.service'
 
 const CartItems = ({ cartItem, onRemoveItem }) => {
   const jwtToken = localStorage.getItem("jwt");
@@ -18,7 +18,7 @@ const CartItems = ({ cartItem, onRemoveItem }) => {
   const handleIncreaseQty = async () => {
     try {
       const response = await axios.put(
-        `http://localhost:8071/api/v1/cartItems/${cartItem.cartItemId}`,
+        `${BASE_API_URL}/api/v1/cartItems/${cartItem.cartItemId}`,
         {
           quantity: cartItem.quantity + 1,
           old_price: cartItem.old_price / cartItem.quantity,
@@ -36,7 +36,7 @@ const CartItems = ({ cartItem, onRemoveItem }) => {
   const handleDecreaseQty = async () => {
     if (cartItem.quantity > 1) {
       const response = await axios.put(
-        `http://localhost:8071/api/v1/cartItems/${cartItem.cartItemId}`,
+        `${BASE_API_URL}/api/v1/cartItems/${cartItem.cartItemId}`,
         {
           quantity: cartItem.quantity - 1, // Decrease quantity by 1, ensuring it doesn't go below 1
           old_price: cartItem.old_price / cartItem.quantity,

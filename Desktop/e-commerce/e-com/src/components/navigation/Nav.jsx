@@ -1,17 +1,18 @@
 import React, { useEffect, useState } from "react";
-import { FaBars } from "react-icons/fa";
-import { FaSearch } from "react-icons/fa";
-import { NavLink, useNavigate } from "react-router-dom";
-import Sidebar from "./Sidebar";
-import { RiAccountPinCircleFill } from "react-icons/ri";
 import "./Nav.css";
-import { RxCross2 } from "react-icons/rx";
 import { MdAccountCircle } from "react-icons/md";
+import { RiAccountPinCircleFill } from "react-icons/ri";
 import { FaCartArrowDown } from "react-icons/fa";
+import { FaSearch } from "react-icons/fa";
+import { RxCross2 } from "react-icons/rx";
+import { FaBars } from "react-icons/fa";
+import Sidebar from "./Sidebar";
 import logo from "../assets/logo.png";
-import axios from "axios";
-
+import { NavLink, useNavigate } from "react-router-dom";
 const Nav = () => {
+  const [showSidebar, setShowSidebar] = useState(false);
+
+
   const [display2, setDisplay2] = useState("display:none");
   useEffect(() => {
     let login1 = localStorage.getItem("login");
@@ -19,9 +20,9 @@ const Nav = () => {
       setDisplay2("");
     }
   }, []);
-  const [showSidebar, setShowSidebar] = useState(false);
-  // const { getTotalCartItems } = useContext(ShopContext);
-  const navigate = useNavigate();
+
+  
+
   const toggleSidebar = () => {
     setShowSidebar(!showSidebar);
   };
@@ -29,9 +30,10 @@ const Nav = () => {
     window.scrollTo(0, 0);
     navigate("/");
   };
+
   const [isSearchBarVisible, setIsSearchBarVisible] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
-  const [searchResults, setSearchResults] = useState([]);
+  const navigate = useNavigate();
 
   const toggleSearchBar = () => {
     setIsSearchBarVisible(!isSearchBarVisible);
@@ -43,23 +45,30 @@ const Nav = () => {
     }
   };
 
-  const handleSearch=()=>{
-
-    navigate(`/product/search?q=${encodeURIComponent(searchQuery)}`)
-  }
+  const handleSearch = () => {
+    navigate(`/product/search?q=${encodeURIComponent(searchQuery)}`);
+  };
 
   return (
-    <nav className="navbar">
-      <div className="navbar-container ">
-        <div className="navbar-logo ">
+    <div className="navbar-container">
+      <div className="navbar-wrap">
+        <div className="navbar-logo">
           <img src={logo} alt="logo" onClick={scrollToTop} />
-          <NavLink
-            to="/"
-            className="text-decoration-none"
-            onClick={scrollToTop}
-          >
+          <NavLink to="/" onClick={scrollToTop}>
             SellX
           </NavLink>
+        </div>
+        <div className="menu-bar">
+          <div>
+            <a href="/mens">Men</a>
+          </div>
+          <div>
+            <a href="/womens">Women</a>
+          </div>
+          <div>
+            <a href="/kids">Kids</a>
+          </div>
+          
         </div>
 
         <div
@@ -85,14 +94,17 @@ const Nav = () => {
           </div>
         </div>
 
-        <div className="navbar-items">
-          <NavLink to="/mens">Men</NavLink>
-          <NavLink to="/womens">Women</NavLink>
-          <NavLink to="/kids">Kids</NavLink>
-        </div>
+        {showSidebar && (
+          <Sidebar isOpen={showSidebar} toggleSidebar={toggleSidebar} />
+        )}
 
-        <div className="login">
-          <NavLink
+        <div className="profile-section">
+          <div className="login">
+            {/* <MdAccountBox /> */}
+
+              
+
+            <NavLink
             to={localStorage.getItem("login") ? "/user/profile" : "/login"}
             style={{ display: display2 }}
           >
@@ -103,24 +115,25 @@ const Nav = () => {
             )}
           </NavLink>
 
-          <NavLink to="/cart">
-            <FaCartArrowDown className="cart" />
-          </NavLink>
-          {/* <div className="nav-cart-count">{getTotalCartItems()}</div> */}
-        </div>
 
-        {showSidebar && (
-          <Sidebar isOpen={showSidebar} toggleSidebar={toggleSidebar} />
-        )}
-        <div className="menu-icon" onClick={toggleSidebar}>
-          <FaBars />
-        </div>
 
-        <div className="search-icon" onClick={toggleSearchBar}>
-          <FaSearch />
+
+          </div>
+
+          <div>
+            <a href="/cart">
+              <FaCartArrowDown />
+            </a>
+          </div>
+          <div className="search-icon" onClick={toggleSearchBar}>
+            <FaSearch />
+          </div>
+          <div className="menu-icon" onClick={toggleSidebar}>
+            <FaBars />
+          </div>
         </div>
       </div>
-    </nav>
+    </div>
   );
 };
 

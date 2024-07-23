@@ -21,9 +21,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
           <li>
             <a href="/kids">Kids</a>
           </li>
-          <li>
-            <a href="/login">Signin</a>
-          </li>
+         
         </ul>
       </div>
     </div>

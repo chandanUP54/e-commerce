@@ -4,12 +4,14 @@ import { Navigate, Route, Routes } from "react-router-dom";
 import Shop from "./pages/Shop";
 import Product from "./pages/Product";
 import Cart from "./pages/Cart";
-import Signin from "./pages/Signin";
+import Signin from "./components/auth/Signin";
+import Signup from "./components/auth/Signup";
+import Forget from './components/auth/Forget'
+import Reset from './components/auth/Reset'
 import Footer from "../src/components/footer/Footer";
 import mens_banner from "../src/components/assets/banner_mens.png";
 import womens_banner from "../src/components/assets/banner_women.png";
 import kids_banner from "../src/components/assets/banner_kids.png";
-import Signup from "./pages/Signup";
 import ShippingInfo from "./components/checkouts/ShippingInfo";
 import ConfirmOrder from "./components/checkouts/ConfirmOrder";
 import MyProfile from "./components/profile/MyProfile";
@@ -20,6 +22,7 @@ import AdminRouter from "./admin/components/AdminRouter";
 import OrdersTest from "./admin/components/OrdersTest";
 import ProductDisplay from "./components/productDisplay/ProductDisplay";
 import SearchProduct from "./components/navigation/SearchProduct";
+import CheckoutSteps from "./components/checkouts/CheckoutSteps";
 
 const roles = localStorage.getItem("roles");
 
@@ -54,6 +57,9 @@ function App() {
         <Route path="/cart" element={<Protected Component={Cart} />} />
         <Route path="/login" element={<Signin />} />
         <Route path="/signup" element={<Signup />}></Route>
+        <Route path="/forget-password" element={<Forget />}></Route>
+        <Route path="/reset-password" element={<Reset />} />
+        
         <Route
           path="/shipping"
           element={<Protected Component={ShippingInfo} />}
@@ -82,6 +88,8 @@ function App() {
 
         {/* remove this */}
         <Route path="/product/search" element={<SearchProduct />}></Route>
+        {/* <Route path="/checkout" element={<CheckoutSteps />}></Route> */}
+
       </Routes>
       <Footer />
     </div>

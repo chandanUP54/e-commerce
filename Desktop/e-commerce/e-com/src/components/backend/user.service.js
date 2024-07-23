@@ -1,13 +1,15 @@
 import axios from "axios";
 // connected to e-com-spring
-const BASE_API_URL="http://localhost:8071/auth"
+
+// export const BASE_API_URL="https://brainy-dock-production.up.railway.app"
+export const BASE_API_URL="http://localhost:8071"
 class UserService{
 
     saveUser(user){
-    return axios.post(BASE_API_URL+"/signup",user)
+    return axios.post(BASE_API_URL+"/auth/signup",user)
     }
     loginUser(loginRequest){
-        return axios.post(BASE_API_URL+"/signin",loginRequest)
+        return axios.post(BASE_API_URL+"/auth/signin",loginRequest)
     }
     
 }

@@ -9,7 +9,7 @@ const Hero = () => {
       <div class="container">
         <div class="row">
           <div class="order-lg-0 order-1 text-center text-lg-start mt-3 mt-lg-0 col-12 col-md-12 col-lg-6 d-flex flex-column justify-content-center  align-items-start">
-            <h1 class=" fw-bolder ">NEW ARRIVALS ONLY </h1>
+            <h1 class=" fw-bolder ">TOP WOMEN CHOICE </h1>
             <p class="mt-3 mb-4 para-width1 text-light-grey">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit.
               Molestiae in iusto expedita aliquam quaerat quasi qui reiciendis
@@ -17,10 +17,10 @@ const Hero = () => {
             </p>
             <div class="text-center w-100 text-md-start">
               <a
-                href="http://localhost:3000/womens"
+                href="https://ecommerce-by-chandan.vercel.app/womens"
                 class="btn btn-primary px-5 py-2"
               >
-                Latest Collection
+                Check Collection
                 <span>
                   <FaArrowRight />
                 </span>
@@ -29,7 +29,7 @@ const Hero = () => {
           </div>
           <div class="order-lg-1 order-0  col-12 col-md-12 col-lg-6">
             <div class="text-center text-lg-end">
-              <a href="http://localhost:3000/womens">
+              <a href="https://ecommerce-by-chandan.vercel.app/womens">
                 <img src={hero_img} alt="" class="hero-photo img-fluid py-3" />
               </a>
             </div>

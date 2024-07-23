@@ -7,6 +7,7 @@
   justify-content: center;
   padding: 0 140px;
   margin-bottom: 150px;
+  /* background: rgb(228, 216, 216); */
   background: linear-gradient(180deg, #fde1ff 0%, #e1ffea22 60%);
 }
 .offers-left {
@@ -49,6 +50,8 @@
 .offers-right img {
   width: 250px;
   height: 300px;
+  /* background: transparent; */
+  background: local;
 }
 
 @media screen and (max-width: 1000px) {
