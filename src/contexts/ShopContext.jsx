@@ -42,11 +42,13 @@ const ShopContextProvider = (props) => {
 
   return (
     <ShopContext.Provider value={contextValue}>
-      {loading ? (
+      {/* {loading ? (
         <p></p>
       ) : (
         props.children
-      )}
+      )} */}
+
+      {props.children}
     </ShopContext.Provider>
   );
 };
