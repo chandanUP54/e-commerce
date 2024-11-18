@@ -74,7 +74,7 @@ const UserOrders = () => {
               <div className="order-info">
                 <img src={product.imageUrl} alt="Description" />
 
-                <a href={`http://localhost:3000/product/${product.productId}`}>
+                <a href={`/product/${product.productId}`}>
                   {product.productName}
                 </a>
 
