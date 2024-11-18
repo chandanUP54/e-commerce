@@ -70,7 +70,7 @@ const CartItems = ({ cartItem, onRemoveItem }) => {
             </button>
           </div>
           <div className="pricing">
-            <NavLink to={`http://localhost:3000/product/${cartItem.productId}`}>
+            <NavLink to={`/product/${cartItem.productId}`}>
               {" "}
               {cartItem.productName}
             </NavLink>
