@@ -11,6 +11,9 @@ import { useNavigate, useParams } from "react-router-dom";
 import { BASE_API_URL } from "../backend/user.service";
 const ProductDisplay = () => {
   const { all_product } = useContext(ShopContext);
+
+  console.log(all_product);
+  
   const { productId } = useParams();
   const product = all_product.find((e) => e.id === Number(productId));
   const jwtToken = localStorage.getItem("jwt");
